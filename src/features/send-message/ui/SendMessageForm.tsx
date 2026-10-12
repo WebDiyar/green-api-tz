@@ -29,9 +29,9 @@ export function SendMessageForm({ chat }: { chat: Chat }) {
   }
 
   return (
-    <form onSubmit={submit} className="flex gap-2 border-t p-3">
-      <Input value={text} onChange={(e) => setText(e.target.value)} placeholder="Написать сообщение…" aria-label="Сообщение" maxLength={4000} autoFocus />
-      <Button type="submit" size="icon" disabled={!text.trim() || send.isPending} aria-label="Отправить">
+    <form onSubmit={submit} className="flex items-center gap-2 border-t px-4 py-3">
+      <Input value={text} onChange={(e) => setText(e.target.value)} placeholder="Написать сообщение…" aria-label="Сообщение" maxLength={4000} autoFocus className="h-11 rounded-full border-0 bg-muted px-4" />
+      <Button type="submit" size="icon" className="size-11 rounded-full" disabled={!text.trim() || send.isPending} aria-label="Отправить">
         <Send />
       </Button>
     </form>

@@ -27,15 +27,16 @@ export function CreateChatForm() {
   })
 
   return (
-    <form onSubmit={handleSubmit(({ phone }) => create.mutate(phone))} className="space-y-1 border-b p-3">
+    <form onSubmit={handleSubmit(({ phone }) => create.mutate(phone))} className="space-y-1.5 px-4 pt-1 pb-3">
       <div className="flex gap-2">
         <Input
           type="tel"
           placeholder="Номер телефона получателя"
           aria-label="Номер телефона получателя"
+          className="h-10 rounded-full border-0 bg-muted px-4"
           {...register('phone')}
         />
-        <Button type="submit" disabled={create.isPending}>
+        <Button type="submit" className="h-10 rounded-full px-5" disabled={create.isPending}>
           {create.isPending ? '…' : 'Чат'}
         </Button>
       </div>

@@ -11,12 +11,15 @@ export function ChatList() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex items-center justify-between border-b p-3">
-        <span className="font-semibold">WhatsApp · {idInstance}</span>
+      <div className="flex items-center justify-between px-4 pt-4 pb-2">
+        <div className="min-w-0">
+          <h1 className="text-xl font-bold">Чаты</h1>
+          <p className="truncate text-xs text-muted-foreground">WhatsApp · инстанс {idInstance}</p>
+        </div>
         <LogoutButton />
       </div>
       <CreateChatForm />
-      <ScrollArea className="min-h-0 flex-1">
+      <ScrollArea className="min-h-0 flex-1 px-2">
         {chats.length === 0 && (
           <div className="flex flex-col items-center gap-2 p-8 text-center text-sm text-muted-foreground">
             <MessageSquarePlus className="size-8" />

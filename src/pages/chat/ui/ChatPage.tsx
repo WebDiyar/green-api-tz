@@ -9,8 +9,8 @@ export function ChatPage() {
   useReceiveMessages()
 
   return (
-    <div className="mx-auto flex h-dvh max-w-6xl border-x bg-background">
-      <aside className={cn('w-full border-r md:block md:w-80 md:shrink-0', activeId ? 'hidden' : 'block')}>
+    <div className="flex h-dvh bg-background">
+      <aside className={cn('w-full border-r md:block md:w-[360px] md:shrink-0', activeId ? 'hidden' : 'block')}>
         <ChatList />
       </aside>
       <main className={cn('min-w-0 flex-1 md:block', activeId ? 'block' : 'hidden')}>

@@ -8,9 +8,8 @@ export function MessageBubble({ message }: { message: Message }) {
     <div className={cn('flex', message.out ? 'justify-end' : 'justify-start')}>
       <div
         className={cn(
-          'max-w-[85%] rounded-2xl px-3 py-2 break-words whitespace-pre-wrap sm:max-w-[70%]',
-          message.out
-            ? 'rounded-br-sm bg-linear-to-br from-sky-500 to-violet-600 text-white' : 'rounded-bl-sm bg-card shadow-sm',
+          'max-w-[85%] rounded-2xl px-3.5 py-2 break-words whitespace-pre-wrap sm:max-w-[65%]',
+          message.out ? 'rounded-br-md bg-primary text-white' : 'rounded-bl-md bg-card',
         )}
       >
         {message.text}

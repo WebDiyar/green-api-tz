@@ -34,10 +34,10 @@ export function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit((f) => auth.mutate(f))}
-      className="w-full max-w-sm space-y-4 rounded-2xl border bg-card p-6 shadow-sm"
+      className="w-full max-w-sm space-y-4 rounded-2xl bg-card p-6"
     >
       <div className="space-y-3 text-center">
-        <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-linear-to-br from-sky-500 to-violet-600 text-white shadow-md">
+        <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-linear-to-br from-sky-500 to-violet-600 text-white">
           <MessageCircle className="size-7" />
         </div>
         <div>

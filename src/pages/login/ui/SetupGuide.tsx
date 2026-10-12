@@ -19,7 +19,7 @@ const steps = [
 
 export function SetupGuide() {
   return (
-    <section className="w-full max-w-sm space-y-4 rounded-2xl border bg-card/70 p-6 shadow-sm backdrop-blur">
+    <section className="w-full max-w-sm space-y-4 rounded-2xl border bg-card/70 p-6 shadow-none">
       <h2 className="text-lg font-semibold">Где взять данные для входа</h2>
       <ol className="space-y-3">
         {steps.map((s, i) => (

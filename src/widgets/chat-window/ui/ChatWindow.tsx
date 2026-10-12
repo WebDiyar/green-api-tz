@@ -2,6 +2,7 @@ import { ArrowLeft, MessagesSquare } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 import { MessageBubble, useChats } from '@/entities/chat'
 import { SendMessageForm } from '@/features/send-message'
+import { Avatar, AvatarFallback } from '@/shared/ui/avatar'
 import { Button } from '@/shared/ui/button'
 
 export function ChatWindow() {
@@ -29,16 +30,21 @@ export function ChatWindow() {
 
   return (
     <div className="flex h-full flex-col">
-      <header className="flex items-center gap-2 border-b p-3">
+      <header className="flex items-center gap-3 border-b px-4 py-3">
         <Button variant="ghost" size="icon" className="md:hidden" aria-label="Назад" onClick={() => openChat(null)}>
           <ArrowLeft />
         </Button>
+        <Avatar className="size-10">
+          <AvatarFallback className="bg-linear-to-br from-sky-400 to-violet-500 font-medium text-white">
+            {chat.title.replace('+', '').slice(0, 2)}
+          </AvatarFallback>
+        </Avatar>
         <div className="min-w-0">
           <h2 className="truncate font-semibold">{chat.title}</h2>
           <p className="text-xs text-muted-foreground">Ответы появляются автоматически</p>
         </div>
       </header>
-      <div className="min-h-0 flex-1 space-y-2 overflow-y-auto bg-muted/40 p-3">
+      <div className="min-h-0 flex-1 space-y-2 overflow-y-auto bg-muted/60 p-4">
         {chat.messages.length === 0 && (
           <p className="pt-8 text-center text-sm text-muted-foreground">Напишите первое сообщение внизу и нажмите Enter</p>
         )}

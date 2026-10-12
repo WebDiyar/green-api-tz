@@ -1,6 +1,8 @@
 # WhatsApp Chat
 
-Минимальный веб-чат для отправки и получения **текстовых** сообщений в WhatsApp через сервис [GREEN-API](https://green-api.com). Интерфейс — по мотивам мессенджера [MAX](https://web.max.ru/).
+**Демо:** <https://green-api-tz-blue.vercel.app>
+
+Минимальный веб-чат для отправки и получения **текстовых** сообщений в WhatsApp через сервис [GREEN-API](https://green-api.com). Интерфейс выполнен в стиле мессенджера [MAX](https://web.max.ru/).
 
 Тестовое задание на позицию «Фронтенд-разработчик React». Задание допускает выполнение для WhatsApp, если MAX недоступен: в консоли GREEN-API для региона автора тариф MAX отсутствовал, поэтому использован WhatsApp. Методы `sendMessage`, `receiveNotification` и `deleteNotification` у MAX и WhatsApp совпадают, отличается только проверка номера.
 
